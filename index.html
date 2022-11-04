@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="index.html" id="navTitle" class="navbar-brand"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="alert alert-danger" role="alert" id="errors" style="display: none"></div>
+            <div class="row row-cols-lg-auto g-3 align-itens-center">
+                <div class="col-12">
+                    <input type="text" id="description" class="form-control" placeholder="Descricão">
+                </div>
+                <div class="col-12">
+                    <input type="number" id="amount" class="form-control" placeholder="Quantidade">
+                </div>
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="input-group-text">R$</div>
+                        <input type="number" step="0.01" id="value" class="form-control" placeholder="Valor">
+                    </div>
+                </div>
+                <div class="col-12" id="btnAdd">
+                    <button class="btn btn-dark" onclick="addData()">Add</button>
+                </div>
+                <div class="col-12" id="btnUpdate" style="display: none">
+                    <input type="hidden" id="inputIdUpdate">
+                    <button onclick="updateData()" class="btn btn-success">Save</button>
+                    <button onclick="resetForm()" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+
+            <table id="listTable" class="table table-hover">
+
+            </table>
+        </div>
+    </main>
+    <footer>
+        <nav class="navbar navbar-light fixed-bottom">
+            <div class="container-fluid">
+                <h4 class="text-center text-success">Total: <span id="totalValue">R$ 0,00</span></h4>
+            </div>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
